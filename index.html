@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>Skillbox_Intensive</title>
+        <meta name="description" content="description" />
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
+    
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        <div class="app" id="app">
+          <header class="app__header header">
+            <div class="header__container container">
+              <a href=”#app” class=”header__logo”>
+                <img src="assets/Logo.png" alt="SYSTEM" width="192" height="32" class="header__logo-img">
+              </a>           
+              <nav class="header__menu">
+                <ul class="header__menu-list">
+                  <li class="header__menu-item">
+                    <a href="#app" class="header__menu-link">Домой</a>
+                  </li>
+                  <li class="header__menu-item">
+                    <a href="#features" class="header__menu-link">Особенности</a>
+                  </li>
+                  <li class="header__menu-item">
+                    <a href="#benefits" class="header__menu-link">Преимущества</a>
+                  </li>    
+                </ul>  
+              </nav>         
+            </div>    
+          </header>
+
+          <main class="app__main">
+            <section class="hero">
+              <div class="hero__container container">
+               <div class="hero__content">
+                <figure class="hero__figure">
+                   <img class="hero__image" src="assets/hero_1.png" alt="Разработано 2000+ приложений">                
+                </figure>
+
+                <div class="hero__text">
+                  <h1 class="hero__title">
+                    Разработано 2000+ приложений    
+                  </h1>
+                 
+                  <div class="hero__subtitle">
+                    Для вашего удобства мы разработали множество приложений для вашего бизнеса и команды, которые доступны 
+                    в любое время суток  
+                  </div>
+
+                  <button class="hero__button">
+                    Присоединяйтесь  
+                  </button>
+                </div>
+               </div> 
+              
+               <div class="hero__dots">
+                  <span class="hero__dot active"></span>
+                  <span class="hero__dot"></span>
+                  <span class="hero__dot"></span>
+               </div>
+              </div>  
+            </section>
+
+            <section class="features" id="features">  <!-- создаём секцию, где атрибут id нужен для кнопок-->
+              <div class="features__container container">  <!-- как всегда создаём контейнер в секции, чтобы контент лежал внутри--> 
+                <div class="features__list">
+                  <div class="features__item"> <!--внутри item иконка и текст-->
+                    <img src="assets/check.png" alt="check" 
+                    width="44" height="44" class="features__item-icon">
+                                       
+                    <div class="features__item-content">
+                      <h3 class="features__item-title">
+                        Для бизнеса
+                      </h3>
+
+                      <p class="features__item-caption">
+                        Создаем кастомизированные программы и сервисы
+                        для развития управленческих команд в российских и
+                        международных компаниях
+                      </p>                    
+                    </div>
+                  </div>
+                
+                  <div class="features__item"> <!-- внутри item иконка и текст-->
+                    <img src="assets/check.png" alt="check" width="44" height="44" class="features__item-icon">
+                    
+                    
+                    <div class="features__item-content">
+                      <h3 class="features__item-title">
+                        Для колл-центров
+                      </h3>
+
+                      <p class="features__item-caption">
+                        Помогаем руководителям и командам колл-центров создать полный цикл по поддержке клиентов и
+                        организовать контроль качества
+                      </p>
+                    
+                    </div>
+                  </div>
+
+                  <div class="features__item"> <!--внутри item иконка и текст-->
+                    <img src="assets/check.png" alt="check" width="44" height="44" class="features__item-icon">
+                           
+                    <div class="features__item-content">
+                      <h3 class="features__item-title">
+                        Облачные хранилища
+                      </h3>
+
+                      <p class="features__item-caption">
+                        Разрабатываем локальные защищенные
+                        корпоративные хранилища, а также осуществляем
+                        поддержку на протяжении всего времени
+                        пользования
+                      </p>                    
+                    </div>
+                  </div>
+
+                </div> 
+              </div>    
+              </section>
+            
+              <section class="benefits" id="benefits">
+                <div class="benefits__container container">
+                  <h2 class="benefits__title">
+                    Преимущества
+                  </h2>
+                </div>
+                <div class="benefits__list">  <!--список items с картинками--> 
+
+                </div>
+              </section>
+
+
+
+
+
+
+
+          </main>  
+
+          <footer class="app__footer footer">
+            <div class="footer__container container">
+             <div class="footer__cpyright">
+              2000-2022 © System
+             </div> 
+            </div>   
+          </footer>
+        </div>
+        
+        <script type="text/javascript" src="main.js"></script>  
+      </body>
+</html>

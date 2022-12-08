@@ -1,0 +1,290 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Montserrat', sans-serif;
+  background: #FFFFFF;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+p {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+section  {
+  margin-bottom: 85px;
+}
+
+.container { 
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+
+/*@media элемент для того чтобы написать адаптивные св-ва*/
+@media (max-width: 1440px) {  /*для всех у кого ширина экрана не более 1440px*/
+  .container { 
+    padding: 0 32px;
+  }
+}
+
+@media (max-width: 768px) {  /*для совсем маленьких экранов */
+  .container { 
+    padding: 0 16px;
+  }
+}
+
+
+
+.header {
+  padding: 50px 0;
+  background: #424A57;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  flex-shrink: 0;
+}
+.header__menu-list {
+  display: flex; 
+}
+
+.header__menu-link {
+  margin-left: 32px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 44px; 
+  color: #E1E1E1;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.header__menu-link:hover {
+  color: #0096A7;
+}
+
+.hero {
+  padding: 100px 0 32px;  /*отступы. самый min отступ у секции*/
+  background: rgba(246, 248, 251, 0.9); 
+}
+
+.hero__content {
+  display: flex; /*чтобы картинка и текст распологались по сторонам*/
+  align-items: center;  
+}  
+
+.hero__figure {
+  width: 50%;
+  height: 450px;
+  margin-right: 60px; /*отступ справа от картинки*/
+  background: #D9D9D9;
+  border-radius: 4px;
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*чтобы картинка всегда покрывала весь свой контейнер .hero__figure*/  
+  object-position: 50% 50%;
+  border-radius: 4px;
+  /*flex-shrink: 0; чтобы браузер картинку не сжимал. 
+                    можно отрегулировать это через свойства текста*/
+}
+
+.hero__text {
+  width: 50%;
+}
+
+.hero__title {
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 64px;
+  color: #424A57;
+}
+
+.hero__subtitle  { /*находится в 32 пикселей от заголовка*/
+  margin-top: 32px;
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 38px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.hero__button {
+  margin-top: 32px;
+  display: inline-flex;  /*чтобы кнопка стала по середине при адаптации экрана*/
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;  /*отступы от текста до краёв кнопки*/
+  background-color: #0096A7;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.06);
+  border-radius: 50px;
+
+  font-weight: 700;  /*свойства текста на кнопке*/
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  cursor: pointer; /*чтобы появлялся курсор в виде руки*/
+  border: none;
+  font-family: inherit; /*унаследование от родителя*/
+  transition: background-color .15s;
+}
+
+.hero__button:hover {  /*сотояние кнопки при наведении*/
+  background-color: #00bbcf;
+}
+
+
+.hero__dots {     /**/
+  margin-top: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__dot {
+  margin: 0 8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 4px solid #0096A7;
+  cursor: pointer;
+  transition: background-color .15s;   /*15 милисекунд*/
+}
+
+.hero__dot:hover,  /*когда на эту точку будем наводиться*/ 
+.hero__dot.active {   /*когда у этой точки будет класс active*/ 
+  background-color: #0096A7;  /*как наши границы*/ 
+}
+
+
+
+
+
+@media (max-width: 1024px) {    /*для экранов не более 1024px */    
+  .hero { 
+    padding: 64 0 32px;
+  }
+  
+  .hero__content {    /*картинка и текст будут стоять друг под другом*/
+    display: block;
+  }
+
+  .hero__figure {
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 32px;
+  }
+
+  .hero__text {
+   width: auto;
+   text-align: center;
+  }
+}
+
+@media (max-width: 768px) {    /*для экранов мобильных устройств */    
+  .hero__figure { 
+    margin-left: -16px;   /* -, чтобы компенсировать paddings контейнеров*/
+    margin-right: -16px;
+  }
+
+  .hero__title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .hero__subtitle {
+    margin-top: 16px;
+    font-size: 18px;
+    line-height: 44px;
+  }
+}
+
+
+
+
+
+
+.features__list {
+  display: flex;
+  align-items: start;  /*по вертикали с начала контейнера*/
+}
+
+.features__item {
+  width: calc(100% / 3);  /*одинакового размера блоки*/
+  display: flex;
+  align-items: start;  /*чтобы иконочка check располагалась сверху*/
+}
+
+/*чтобы расстояние между блоками было одинаковым*/
+.features__item + .features__item {   /*это означает, что св-во будет применяться ко всем .features__item, следующ. друг за другом*/
+margin-left: 20px;
+}
+
+.features__item-icon {
+  flex-shrink: 0;  /*чтобы иконочка не сжималась ни в коем случае*/ 
+  margin-right: 16px;
+}
+
+.features__item-title {
+  margin-bottom: 14px;
+  font-weight: 700;     /*эти свойства копируем из figma'*/ 
+  font-size: 24 px;
+  line-height: 44px;
+  color: #424A57;
+}
+
+.benefits__title {
+  font-weight: 700;   /*эти свойства также копируем из figma'*/
+  font-size: 48px;
+  line-height: 60px;
+  color: #424A57;
+  margin-bottom: 32px;  /*нижний отступ берём тоже из figma'*/
+}
+
+.benefits__list {   /*высота секции - картинка с текстом'*/
+  height: 493px;
+}
+
+
+
+
+
+
+
+
+
+
+.footer {
+  padding: 47px 0;
+  background: rgba(66, 74, 87, 0.5)
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__copyright {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 44px;
+  color: #FFFFFF;
+}
